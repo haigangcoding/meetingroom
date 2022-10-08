@@ -1,0 +1,19 @@
+// 继承 base 页面
+{% extends 'base.html' %}
+
+// 定义的content 内容
+{% block content %}
+
+// 从视图层传出来
+{% if job_list %}
+  <ul>
+    // 遍历职位列表每一个职位
+    {% for job in job_list %}
+    <li>{{job.type_name}} <a href="/job/{{ job.id }}/" style="color: blue">{{ job.job_name }}</a> {{job.city_name}} </li>
+    {% endfor %}
+  </ul>
+{% else %}
+<p> NO jobs are available.</p>
+{% endif %}
+
+{% enblock %}
