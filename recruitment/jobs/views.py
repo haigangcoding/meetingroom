@@ -20,6 +20,7 @@ def joblist(request):
 
     # 遍历职位列表
     for job in job_list:
-        job.city_name = Cities[job.job_city]
-        job.job_type = JobTypes()
+        job.city_name = Cities[job.job_city][1]
+        job.job_type = JobTypes[job.job_type][1]
 
+    return HttpResponse(template.render(context))
