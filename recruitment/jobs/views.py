@@ -1,12 +1,10 @@
-from django.shortcuts import render
-
 # Create your views here.
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 
-from jobs.models import Job
-from jobs.models import Cities, JobTypes
+from recruitment.jobs.models import Job
+from recruitment.jobs.models import Cities, JobTypes
 
 # Django 视图 有几种方法： 可以用函数去定义，可以用视图的类去定义
 # 用函数去定义在 views 层里面

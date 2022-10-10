@@ -1,5 +1,8 @@
-form django.conf.urls import url
-from jobs import views
+from django.conf.urls import url
+from django.urls import path
+from django.conf import settings
+
+from recruitment.jobs import views
 
 # 定义urlpatterns变量
 urlpatterns = [
