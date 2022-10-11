@@ -1,6 +1,8 @@
+
 from django.contrib import admin
-from jobs.models import Job
+from recruitment.jobs.models import Job
 # Register your models here.
+
 
 # 引入管理类的参数
 class JobAdmin(admin.ModelAdmin):
@@ -8,6 +10,7 @@ class JobAdmin(admin.ModelAdmin):
     exclude = ('creator', 'created_date', 'modified_date')
     # 列表展示的参数
     list_display = ('job_name', 'job_type', 'job_city', 'creator', 'created_date', 'modified_date')
+
     # 利益 ModelAdmin 这个父类里面定义的方法
     def save_model(self, request, obj, form, change):
 

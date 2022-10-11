@@ -1,15 +1,15 @@
-// 继承 base 页面
+<!--// 继承 base 页面-->
 {% extends 'base.html' %}
 
-// 定义的content 内容
+<!--// 定义的content 内容,创建content块，能够替换掉base.html里定义的内容-->
 {% block content %}
 
-// 从视图层传出来
+<!--// 从视图层传出来,判断从视图层传出的job_list列表(职位列表)是否有值-->
 {% if job_list %}
   <ul>
-    // 遍历职位列表每一个职位
+<!--    // 遍历职位列表每一个职位-->
     {% for job in job_list %}
-    <li>{{job.type_name}} <a href="/job/{{ job.id }}/" style="color: blue">{{ job.job_name }}</a> {{job.city_name}} </li>
+        <li>{{job.type_name}}  <a href="/job/{{ job.id }}/" style="color:blue">{{ job.job_name }}</a>   {{job.city_name}}  </li>
     {% endfor %}
   </ul>
 {% else %}

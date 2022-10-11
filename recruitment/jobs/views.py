@@ -9,6 +9,7 @@ from recruitment.jobs.models import Cities, JobTypes
 # Django 视图 有几种方法： 可以用函数去定义，可以用视图的类去定义
 # 用函数去定义在 views 层里面
 
+
 def joblist(request):
     job_list = Job.objects.order_by('job_type')
     # 加载模板 等于用 loader 模板的加载器来加载 get_template('joblist.html')
